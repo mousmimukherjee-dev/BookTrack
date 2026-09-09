@@ -1,13 +1,14 @@
 .logo{
 
   background-color: #0D6EFD;
+ 
   border-radius: 1rem;
   width: 5rem;
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .logo .fa-solid{

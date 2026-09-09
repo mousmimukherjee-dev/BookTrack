@@ -8,6 +8,11 @@ html , body{
   margin: 0;
   height: 100%;
   background-color: #0D1117;
+  font-family: 'Inter', sans-serif;
+}
+
+app-root {
+  width: 100%;
 }
 
 :root{
@@ -16,7 +21,7 @@ html , body{
   --text-white: #E6EDF3;
   --text-light-gray:#7D8590;
   --bg-dark-gray:#161B22;
-  -border-gray:#30363D;
+  --border-gray: 1px solid #30363D;
   --bg-blue:#0D6EFD;
 
 }

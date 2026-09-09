@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+html , body{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #0D1117;
+}
+
+:root{
+
+  --body-bg:#0D1117;
+  --text-white: #E6EDF3;
+  --text-light-gray:#7D8590;
+  --bg-dark-gray:#161B22;
+  -border-gray:#30363D;
+  --bg-blue:#0D6EFD;
+
+}

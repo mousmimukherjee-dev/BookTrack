@@ -7,3 +7,23 @@ nav{
 
  background-color: var(--bg-light-gray);
 }
+
+.book-main{
+
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-main h4{
+
+  color: var(--text-white);
+}
+
+.book-main button{
+
+  background-color: var(--bg-blue);
+  border-radius: 8px;
+  color: var(--text-white);
+ 
+}

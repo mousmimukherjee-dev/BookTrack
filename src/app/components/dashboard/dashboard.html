@@ -5,7 +5,7 @@
       BookVault
     </a>
 
-    <div class="d-flex align-items-center gap-2 ">
+    <div class="d-flex align-items-center gap-4">
       <a routerLink="/dashboard" class="btn btn-secondary btn-sm link-style">
         <i class="fa-solid fa-house me-1"></i>
         Books
@@ -27,3 +27,10 @@
     </div>
   </div>
 </nav>
+<main>
+  <div class="book-main container-fluid mt-5">
+    <h4 class="display-7">All Books</h4>
+    <button class="btn"><i class="fa-solid fa-plus"></i>Add New Book</button>
+  </div>
+  <app-book-card></app-book-card>
+</main>

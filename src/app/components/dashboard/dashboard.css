@@ -1,4 +1,4 @@
-nav{
+/* nav{
 
   background-color: var(--bg-dark-gray);
 }
@@ -6,13 +6,6 @@ nav{
 .link-style{
 
  background-color: var(--bg-light-gray);
-}
-
-.book-main{
-
-
-  display: flex;
-  justify-content: space-around;
 }
 
 .book-main h4{
@@ -25,5 +18,5 @@ nav{
   background-color: var(--bg-blue);
   border-radius: 8px;
   color: var(--text-white);
- 
-}
+
+} */

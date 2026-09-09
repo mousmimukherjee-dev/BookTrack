@@ -1,0 +1,17 @@
+.quote-content {
+  display: flex;
+  gap: 1rem;
+}
+
+.quote-content > i {
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.card-body {
+  padding: 1.25rem;
+}

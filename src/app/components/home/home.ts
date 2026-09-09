@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Header } from '../header/header';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule],
+  imports: [FormsModule,Header],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

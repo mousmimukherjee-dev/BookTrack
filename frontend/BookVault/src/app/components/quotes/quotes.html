@@ -6,7 +6,7 @@
         My Quotes
       </h3>
 
-      <p class="text-secondary mb-0">1 saved quote</p>
+      <p class="text-secondary mb-0">{{books.length}} saved quote</p>
     </div>
 
     <a class="btn btn-primary" routerLink="/dashboard/add-quote">
@@ -16,7 +16,9 @@
   </div>
 
   <div class="row g-3">
-    <div class="col-12 col-md-6">
+    @for(book of books; track book.id){
+
+      <div class="col-12 col-md-6">
       <div class="card bg-dark text-light border-secondary h-100">
         <div class="card-body">
           <div class="quote-content d-flex gap-3">
@@ -24,11 +26,10 @@
 
             <div>
               <p class="fst-italic mb-2">
-                Any fool can write code that a computer can understand. Good programmers write code
-                that humans can understand.
+                {{ book.quote }}
               </p>
 
-              <small class="text-secondary"> — Martin Fowler </small>
+              <small class="text-secondary"> — {{ book.author }}</small>
             </div>
           </div>
 
@@ -50,5 +51,8 @@
         </div>
       </div>
     </div>
+
+    }
+    
   </div>
 </div>

@@ -34,16 +34,18 @@
 @if (activeButton() == 'Sign In') {
   <form class="login-form" (ngSubmit)="loginUser()">
     <div class="form-group">
-      <label for="username" class="form-label">Username</label>
+      <label for="email" class="form-label">
+      Email
+    </label>
 
       <input
-        type="text"
-        id="username"
-        name="username"
-        placeholder="Enter username"
-        class="form-control"
-        [(ngModel)]="loginData.email"
-      />
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+      class="form-control"
+      [(ngModel)]="loginData.email"
+    />
     </div>
 
     <div class="form-group">

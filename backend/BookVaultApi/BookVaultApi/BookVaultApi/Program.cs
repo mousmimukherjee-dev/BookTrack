@@ -68,8 +68,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularApp", policy =>
     {
         policy.WithOrigins(
-            "http://localhost:4200",
-            "https://your-app.vercel.app"
+            "http://localhost:4200"
+            
         )
         .AllowAnyHeader()
         .AllowAnyMethod();

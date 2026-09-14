@@ -13,7 +13,8 @@ export class BookCard {
 
   @Input() book:any
   
-  showBookCard: any = true
+  showBookCard: any = true;
+  
 
   constructor(private bookService : BookService){}
 
@@ -31,4 +32,5 @@ export class BookCard {
     })
   }
 
+   
 }

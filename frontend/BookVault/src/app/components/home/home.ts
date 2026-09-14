@@ -12,6 +12,7 @@ import { ThemeService } from '../../services/theme.service';
   styleUrl: './home.css',
 })
 export class Home {
+
   loginData: any = {
     email: '',
     password: '',
@@ -46,7 +47,7 @@ export class Home {
     this.themeService.toggleTheme();
   } 
   loginUser() {
-    this.authService.login(this.registerData).subscribe({
+    this.authService.login(this.loginData).subscribe({
       next: (data: any) => {
         localStorage.setItem('token', data.token);
         this.router.navigate(['/dashboard']);
@@ -74,4 +75,6 @@ export class Home {
       },
     });
   }
+
+ 
 }

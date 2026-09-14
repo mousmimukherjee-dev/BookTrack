@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  apiURL= "http://localhost:5082/api/UserAuth/register"
-  apiURLLogin="http://localhost:5082/api/UserAuth/login"
+  apiURL= "https://bookvault-api-mousumi-byaaafaee0emh6a2.swedencentral-01.azurewebsites.net/api/UserAuth/register"
+  apiURLLogin="https://bookvault-api-mousumi-byaaafaee0emh6a2.swedencentral-01.azurewebsites.net/api/UserAuth/login"
 
   constructor(private http : HttpClient){}
 

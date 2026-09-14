@@ -13,7 +13,7 @@ export interface Quote {
   providedIn: 'root'
 })
 export class QuoteService {
-  private apiUrl = 'http://localhost:5082/api/Quotes'; // match your actual running port
+  private apiUrl = 'https://bookvault-api-mousumi-byaaafaee0emh6a2.swedencentral-01.azurewebsites.net/api/Quotes'; 
 
   constructor(private http: HttpClient) {}
 

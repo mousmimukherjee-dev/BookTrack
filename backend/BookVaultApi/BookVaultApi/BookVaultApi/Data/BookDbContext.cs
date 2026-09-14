@@ -112,5 +112,6 @@ namespace BookVaultApi.Data
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Quote> Quotes { get; set; }
     }
 }

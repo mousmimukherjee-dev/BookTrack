@@ -1,40 +1,49 @@
 @if(showBookCard){
 
-  <div class="card bg-dark text-light border-secondary h-auto">
-  <div class="card-body">
-    <div class="d-flex align-items-start gap-3">
-      <div class="bg-primary bg-opacity-25 rounded p-3">
-        <i class="fa-solid fa-book text-primary"></i>
+  <div class="card border-secondary h-auto">
+    <div class="card-body">
+      <div class="d-flex align-items-start gap-3">
+
+        <div class="bg-primary bg-opacity-25 rounded p-3">
+          <i class="fa-solid fa-book text-primary"></i>
+        </div>
+
+        <div>
+          <h5 class="card-title mb-1">
+            {{ book.title }}
+          </h5>
+
+          <p class="text-secondary mb-0">
+            {{ book.author }}
+          </p>
+        </div>
+
       </div>
 
-      <div>
-        <h5 class="card-title mb-1">
-          {{ book.title }}
-        </h5>
+      <div class="d-flex justify-content-between align-items-center mt-4">
 
-        <p class="text-secondary mb-0">
-          {{ book.author }}
-        </p>
+        <small class="text-secondary">
+          <i class="fa-regular fa-calendar me-1"></i>
+          {{ book.publicationDate | date:"dd MMMM yyyy" }}
+        </small>
+
+        <div class="d-flex gap-3">
+
+          <button class="btn btn-link text-warning p-0">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+
+          <button
+            class="btn btn-link text-danger p-0"
+            (click)="deleteBookCard()"
+          >
+            <i class="fa-solid fa-trash"></i>
+          </button>
+
+        </div>
       </div>
-    </div>
 
-    <div class="d-flex justify-content-between align-items-center mt-4">
-      <small class="text-secondary">
-        <i class="fa-regular fa-calendar me-1"></i>
-        {{ book.publicationDate | date:"dd MMMM yyyy"}}
-      </small>
-
-      <div class="d-flex gap-3">
-        <button class="btn btn-link text-warning p-0">
-          <i class="fa-solid fa-pen"></i>
-        </button>
-
-        <button class="btn btn-link text-danger p-0" (click)="deleteBookCard()">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </div>
     </div>
   </div>
-</div>
 
 }

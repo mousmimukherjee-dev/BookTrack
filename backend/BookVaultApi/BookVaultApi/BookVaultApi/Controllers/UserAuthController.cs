@@ -108,8 +108,8 @@ namespace BookVaultApi.Controllers
         }
 
 
-            private string GenerateJWTToken(ApplicationUser user)
-            {
+        private string GenerateJWTToken(ApplicationUser user)
+        {
             var Claims = new[]
 
             {
@@ -131,12 +131,12 @@ namespace BookVaultApi.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
 
-            }
-
-
-
         }
 
 
+
     }
+
+
+}
 

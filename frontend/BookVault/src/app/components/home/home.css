@@ -45,6 +45,13 @@
   margin: 0 auto;
    color: var(--text-light-gray);
 }
+
+.theme-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;

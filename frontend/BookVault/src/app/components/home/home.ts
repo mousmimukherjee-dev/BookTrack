@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Header } from '../header/header';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +29,7 @@ export class Home {
 
   constructor(
     private authService: AuthService,
-    private router: Router,
+    private router: Router, public themeService: ThemeService
   ) {}
 
   showLogin() {
@@ -40,7 +41,10 @@ export class Home {
     this.activeButton.set('Register');
     this.errorMessage.set('');
   }
-
+  
+    toggleTheme() {
+    this.themeService.toggleTheme();
+  } 
   loginUser() {
     this.authService.login(this.registerData).subscribe({
       next: (data: any) => {

@@ -1,39 +1,37 @@
 <div class="container py-5">
-
   <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
 
-      <div class="card bg-dark text-light border-secondary shadow">
-
+      <div class="card border-secondary shadow">
         <div class="card-body p-4">
 
           <h2 class="fw-bold mb-2">
             <i class="fa-solid fa-quote-left text-primary me-2"></i>
-            Add Quote
+            Add New Quote
           </h2>
 
           <p class="text-secondary mb-4">
-            Save an inspiring quote to your collection.
+            Add your favorite quote to your collection.
           </p>
 
-          <form>
+          <form (ngSubmit)="onSubmit()">
 
-            <!-- Quote -->
             <div class="mb-3">
               <label for="quoteText" class="form-label">
-                Quote text
+                Quote
               </label>
 
               <textarea
                 id="quoteText"
+                name="text"
                 rows="5"
-                class="form-control bg-dark text-light border-secondary"
+                class="form-control border-secondary"
                 placeholder="Enter your quote..."
+                [(ngModel)]="quoteData.text"
               ></textarea>
             </div>
 
-            <!-- Author -->
-            <div class="mb-4">
+            <div class="mb-3">
               <label for="quoteAuthor" class="form-label">
                 Author
               </label>
@@ -41,17 +39,23 @@
               <input
                 type="text"
                 id="quoteAuthor"
-                class="form-control bg-dark text-light border-secondary"
+                name="author"
+                class="form-control border-secondary"
                 placeholder="Enter author name"
-              >
+                [(ngModel)]="quoteData.author"
+              />
             </div>
 
-            <!-- Buttons -->
+            <small class="text-secondary d-block mb-4">
+              All fields are required.
+            </small>
+
             <div class="d-flex justify-content-end gap-2">
 
               <button
                 type="button"
                 class="btn btn-outline-secondary"
+                (click)="onCancel()"
               >
                 Cancel
               </button>
@@ -69,10 +73,8 @@
           </form>
 
         </div>
-
       </div>
 
     </div>
   </div>
-
 </div>

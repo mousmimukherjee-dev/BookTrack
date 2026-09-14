@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BookService } from '../../services/BookService';
-import { errorContext } from 'rxjs/internal/util/errorContext';
+import { Quote, QuoteService } from '../../services/QuoteService';
+
 
 @Component({
   selector: 'app-quotes',
@@ -10,27 +9,34 @@ import { errorContext } from 'rxjs/internal/util/errorContext';
   templateUrl: './quotes.html',
   styleUrl: './quotes.css',
 })
-export class Quotes {
+export class Quotes implements OnInit {
+  quotes: Quote[] = [];
 
-  books: any[] = []
+  constructor(private quoteService: QuoteService) {}
 
-  constructor(private bookService : BookService){
-
+  ngOnInit() {
+    this.loadQuotes();
   }
 
-  ngOnInit(){
-
-    this.bookService.getBooks().subscribe({
-
-      next:(data)=> {
-
-        this.books = data
+  loadQuotes() {
+    this.quoteService.getQuotes().subscribe({
+      next: (data : any) => {
+        this.quotes = data;
       },
-      error:(error) => {
-
-        console.error("An Error Occured:", error)
+      error: (error : any) => {
+        console.error('An error occurred:', error);
       }
-    })
+    });
   }
 
+  deleteQuote(id: number) {
+    this.quoteService.deleteQuote(id).subscribe({
+      next: () => {
+        this.quotes = this.quotes.filter(q => q.id !== id);
+      },
+      error: (error : any) => {
+        console.error('Delete failed:', error);
+      }
+    });
+  }
 }

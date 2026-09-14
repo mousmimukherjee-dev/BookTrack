@@ -1,12 +1,11 @@
 <div class="container py-4">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-      <h3 class="text-light fw-bold mb-1">
+      <h3 class="fw-bold mb-1">
         <i class="fa-solid fa-quote-left text-primary me-2"></i>
         My Quotes
       </h3>
-
-      <p class="text-secondary mb-0">{{ books.length }} saved quote</p>
+      <p class="text-secondary mb-0">{{ quotes.length }} saved quote(s)</p>
     </div>
 
     <a class="btn btn-primary" routerLink="/dashboard/add-quote">
@@ -16,33 +15,27 @@
   </div>
 
   <div class="row g-3">
-    @for (book of books; track book.id) {
+    @for (quote of quotes; track quote.id) {
       <div class="col-12 col-md-6">
-        <div class="card bg-dark text-light border-secondary h-100">
+        <div class="card border-secondary h-100">
           <div class="card-body">
             <div class="quote-content d-flex gap-3">
               <i class="fa-solid fa-quote-left text-primary"></i>
-
               <div>
-                <p class="fst-italic mb-2">
-                  {{ book.quote }}
-                </p>
-
-                <small class="text-secondary"> — {{ book.author }}</small>
+                <p class="fst-italic mb-2">{{ quote.text }}</p>
+                <small class="text-secondary"> — {{ quote.author }}</small>
               </div>
             </div>
 
             <hr class="border-secondary" />
 
             <div class="d-flex justify-content-between align-items-center">
-              <small class="text-secondary"> #01 </small>
-
+              <small class="text-secondary">#{{ quote.id }}</small>
               <div class="d-flex gap-3">
-                <button class="btn btn-link text-warning p-0">
+                <button class="btn btn-link text-warning p-0" [routerLink]="['/dashboard/edit-quote', quote.id]">
                   <i class="fa-solid fa-pen"></i>
                 </button>
-
-                <button class="btn btn-link text-danger p-0">
+                <button class="btn btn-link text-danger p-0" (click)="deleteQuote(quote.id)">
                   <i class="fa-solid fa-trash"></i>
                 </button>
               </div>

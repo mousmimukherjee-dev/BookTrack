@@ -1,9 +1,9 @@
 .title{
 
-  color: var(--text-white);
+  color: var(--bs-body-color);
 }
 
 .subtitle{
 
-  color: var(--text-light-gray);
+  color: var(--bs-secondary-color);
 }

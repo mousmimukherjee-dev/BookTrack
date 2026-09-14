@@ -17,32 +17,6 @@ namespace BookVaultApi.Controllers
     public class BooksController : ControllerBase
     {
 
-
-
-
-        //private static List<Book> books = new List<Book>
-        //    {
-        //        new Book
-        //        {
-
-        //            Id = 1,
-        //            Title="The Alchemist",
-        //            Author="Paulo Coelho",
-        //            PublicationDate= new DateTime(1988,1,1),
-        //            Quote = "When you want something, all the universe conspires in helping you to achieve it."
-        //        },
-        //         new Book
-        //        {
-
-        //            Id = 2,
-        //            Title="1984",
-        //            Author="George Orwell",
-        //            PublicationDate= new DateTime(1949,6,8),
-        //            Quote = "When you want something, all the universe conspires in helping you to achieve it."
-        //        },
-
-        //    };
-
         private readonly BookDbContext _context;
 
         public BooksController(BookDbContext context)

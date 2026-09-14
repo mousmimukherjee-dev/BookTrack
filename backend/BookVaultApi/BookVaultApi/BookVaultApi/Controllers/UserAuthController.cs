@@ -69,7 +69,7 @@ namespace BookVaultApi.Controllers
                 return BadRequest(result.Errors);
             }
 
-            return Ok("User Created Successfully");
+            return Ok(new { message = "User Created Successfully" });
         }
 
         [HttpPost("login")]

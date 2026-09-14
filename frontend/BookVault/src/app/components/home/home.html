@@ -11,15 +11,15 @@
     </div>
 
     @if (activeButton() == 'Sign In') {
-      <form class="login-form">
+      <form class="login-form" (ngSubmit) = "loginUser()">
         <div class="form-group">
           <label for="username" class="form-label">Username</label>
-          <input type="text" id="username" placeholder="Enter username" class="form-control" />
+          <input type="text" id="username" name="username" placeholder="Enter username"  class="form-control" [(ngModel)]="loginData.email"/>
         </div>
 
         <div class="form-group">
           <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" placeholder="Enter password" class="form-control" />
+          <input type="password" id="password" name="password" placeholder="Enter password" class="form-control" [(ngModel)]="loginData.password"/>
         </div>
 
         <button type="submit" class="button-blue">
@@ -27,25 +27,30 @@
         </button>
       </form>
     } @else {
-      <form class="register-form">
-        <div class="form-group">
-          <label for="username" class="form-label">Choose username</label>
-          <input type="text" id="username" placeholder="Choose username" class="form-control" />
-        </div>
+      <form class="register-form" (ngSubmit)="registerUser()">
+    <div class="form-group">
+      <label for="regUsername" class="form-label">Choose username</label>
+      <input type="text" id="regUsername" name="name" [(ngModel)]="registerData.name" placeholder="Choose username" class="form-control" />
+    </div>
 
-        <div class="form-group">
-          <label for="password" class="form-label">Choose password</label>
-          <input type="password" id="password" placeholder="Choose password" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="password" class="form-label">Confirm passwor</label>
-          <input type="password" id="password" placeholder="Repeat password" class="form-control" />
-        </div>
+    <div class="form-group">
+      <label for="regEmail" class="form-label">Email</label>
+      <input type="email" id="regEmail" name="email" [(ngModel)]="registerData.email" placeholder="Enter email" class="form-control" />
+    </div>
 
-        <button type="submit" class="button-blue">
-          <i class="fa-solid fa-right-to-bracket"></i> Sign In
-        </button>
-      </form>
+    <div class="form-group">
+      <label for="regPassword" class="form-label">Choose password</label>
+      <input type="password" id="regPassword" name="password" [(ngModel)]="registerData.password" placeholder="Choose password" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword" class="form-label">Confirm password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat password" [(ngModel)]="registerData.confirmPassword" class="form-control" />
+    </div>
+
+    <button type="submit" class="button-blue">
+      <i class="fa-solid fa-user-plus"></i> Register
+    </button>
+  </form>
     }
   </div>
 </div>

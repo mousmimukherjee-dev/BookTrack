@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, ɵɵresolveBody } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,8 +14,16 @@ export class BookService {
     return this.http.get(this.apiURL);
   }
 
-  getQuotes() : Observable<any>{
+ 
+  addBook(book : any): Observable<any>{
 
-    return this.http.get(this.apiURL)
+    return this.http.post(this.apiURL , book);
   }
+
+  deleteBook(book:any) : Observable<any>{
+
+  return  this.http.delete(`${this.apiURL}/${ book.id }`);
+  }
+
+   
 }

@@ -1,4 +1,6 @@
-<div class="card bg-dark text-light border-secondary h-auto">
+@if(showBookCard){
+
+  <div class="card bg-dark text-light border-secondary h-auto">
   <div class="card-body">
     <div class="d-flex align-items-start gap-3">
       <div class="bg-primary bg-opacity-25 rounded p-3">
@@ -27,10 +29,12 @@
           <i class="fa-solid fa-pen"></i>
         </button>
 
-        <button class="btn btn-link text-danger p-0">
+        <button class="btn btn-link text-danger p-0" (click)="deleteBookCard()">
           <i class="fa-solid fa-trash"></i>
         </button>
       </div>
     </div>
   </div>
 </div>
+
+}

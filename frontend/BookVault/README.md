@@ -79,7 +79,6 @@ https://github.com/mousmimukherjee-dev/BookVault
 
 ## Application Structure
 
-
 BookVault
 │
 ├── backend
@@ -98,8 +97,8 @@ BookVault
 │       │   └── app
 │       │       ├── components
 │       │       ├── services
-│       │       ├── guards
-│       │       └── ...
+│       │       ├── interceptors
+│       │       
 │       └── angular.json
 │
 └── README.md

@@ -65,24 +65,19 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularApp", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins(
-            "http://localhost:4200",
-            "https://brave-stone-058ce9710.5.azurestaticapps.net"
-        )
+        policy.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
+app.UseCors("AllowAll");
 
 app.MapOpenApi();
 app.MapScalarApiReference();
-
-app.UseCors("AllowAngularApp");
-
 app.UseAuthentication();
 app.UseAuthorization();
 

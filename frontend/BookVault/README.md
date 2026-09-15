@@ -1,59 +1,105 @@
-# BookTrack
+# BookVault
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.36.
+BookVault is a full-stack book management application built using Angular 20 and .NET 9, and deployed to Microsoft Azure.
 
-## Development server
+The application allows users to register and log in, manage their books, and save personal quotes. The project also includes JWT authentication, SQL Server with Entity Framework Core, and a responsive UI.
 
-To start a local development server, run:
+## Live Demo
 
-```bash
-ng serve
-```
+**Frontend:**  
+https://brave-stone-058ce9710.5.azurestaticapps.net
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**Backend / Scalar API:**  
+https://bookvault-api-mousumi-byaaafaee0emh6a2.swedencentral-01.azurewebsites.net/scalar/v1#description/introduction
 
-## Code scaffolding
+**GitHub:**  
+https://github.com/mousmimukherjee-dev/BookVault
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## Features
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Authentication
+- User registration
+- User login with email and password
+- JWT-based authentication
 
-```bash
-ng generate --help
-```
 
-## Building
+### Book Management
+- View books
+- Add new book
+- Delete book
+- Edit book functionality is still in progress
 
-To build the project run:
+### My Quotes
+- View saved quotes
+- Add quotes
+- Delete quotes
+- Quotes are connected to the logged-in user
 
-```bash
-ng build
-```
+### UI
+- Responsive design using Bootstrap
+- Dark theme
+- Navigation between Books and My Quotes
+- Font Awesome icons
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## Tech Stack
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Frontend
+- Angular 20
+- TypeScript
+- Bootstrap
+- Font Awesome
+- RxJS
 
-```bash
-ng test
-```
+### Backend
+- C#
+- .NET 9
+- ASP.NET Core Web API
+- Entity Framework Core
+- JWT Authentication
+- ASP.NET Core Identity
+- Scalar / OpenAPI
 
-## Running end-to-end tests
+### Database
+- Microsoft SQL Server
+- Azure SQL Database
 
-For end-to-end (e2e) testing, run:
+### Tools & Deployment
+- Visual Studio
+- Visual Studio Code
+- GitHub
+- Azure App Service
+- Azure Static Web Apps
+- Azure SQL
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Application Structure
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+BookVault
+│
+├── backend
+│   └── BookVaultApi
+│       └── BookVaultApi
+│           ├── Controllers
+│           ├── Data
+│           ├── Models
+│           ├── Services
+│           ├── Program.cs
+│           └── appsettings.json
+│
+├── frontend
+│   └── BookVault
+│       ├── src
+│       │   └── app
+│       │       ├── components
+│       │       ├── services
+│       │       ├── guards
+│       │       └── ...
+│       └── angular.json
+│
+└── README.md

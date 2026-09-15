@@ -68,8 +68,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularApp", policy =>
     {
         policy.WithOrigins(
-            "http://localhost:4200"
-            
+            "http://localhost:4200",
+            "https://brave-stone-058ce9710.5.azurestaticapps.net"
         )
         .AllowAnyHeader()
         .AllowAnyMethod();
@@ -78,11 +78,8 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-
-
-    app.MapOpenApi();
-    app.MapScalarApiReference();
-
+app.MapOpenApi();
+app.MapScalarApiReference();
 
 app.UseCors("AllowAngularApp");
 
